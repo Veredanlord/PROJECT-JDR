@@ -1,0 +1,31 @@
+<div class="login">
+  <div class="text-center">
+    <div class="loginBlock">
+    <form class="form-signin" [formGroup]="loginForm">
+      <label for="username" class="sr-only"></label>
+      <input type="text" class="form-control" id="username" placeholder="{{ 'PAGES.LOGIN.username' | translate }}" minlength="5" required formControlName="username">
+      <!-- <div *ngIf="username.invalid && (loginForm.username.dirty || loginForm.username.touched)" class="alert alert-danger">
+        <div *ngIf="loginForm.username.errors.required">
+          {{ 'PAGES.LOGIN.errors.username.required' | translate }}
+        </div>
+        <div *ngIf="loginForm.username.errors.minlength">
+          {{ 'PAGES.LOGIN.errors.username.minlength' | translate }}
+        </div>
+      </div> -->
+      <label for="password" class="sr-only"></label>
+      <input type="password" class="form-control" id="password" placeholder="{{ 'PAGES.LOGIN.password' | translate }}" required formControlName="password">
+      <!-- <div *ngIf="loginForm.password.invalid && (loginForm.password.dirty || loginForm.password.touched)" class="alert alert-danger">
+        <div *ngIf="loginForm.password.errors.required">
+          {{ 'PAGES.LOGIN.errors.password.required' | translate }}
+        </div>
+      </div> -->
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember">{{ 'PAGES.LOGIN.remember' | translate }}
+        </label>
+      </div>
+      <button class="btn btn-lg btn-dark btn-block" routerLink="/home"  type="submit">{{ 'PAGES.LOGIN.signin' | translate }}</button>
+    </form>
+    <span style="color: white;">{{loginForm.value.username}}</span>
+  </div>
+</div>

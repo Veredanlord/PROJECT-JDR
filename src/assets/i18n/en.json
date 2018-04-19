@@ -2,6 +2,21 @@
   "PAGES": {
       "HOME": {
           "TITLE": "App works !"
+      },
+      "LOGIN": {
+          "username": "Username",
+          "password": "Password",
+          "remember": "Remember me",
+          "signin": "Sign in",
+          "errors": {
+            "username": {
+              "required": "Username is required",
+              "minlength": "Username must be at least 5 characters long"
+            },
+            "password": {
+              "required": "Password is required"
+            }
+          }
       }
   }
 }
